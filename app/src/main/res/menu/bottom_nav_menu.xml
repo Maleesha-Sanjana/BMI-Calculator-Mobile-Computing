@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bmiFragment"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="BMI" />
+    <item
+        android:id="@+id/tipsFragment"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Tips" />
+    <item
+        android:id="@+id/eatingFragment"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Eating" />
+    <item
+        android:id="@+id/adviceFragment"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="Advice" />
+</menu>
