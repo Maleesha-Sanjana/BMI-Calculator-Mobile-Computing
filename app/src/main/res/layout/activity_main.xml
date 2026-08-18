@@ -29,6 +29,8 @@
         app:menu="@menu/bottom_nav_menu"
         app:itemIconTint="@color/bottom_nav_color"
         app:itemTextColor="@color/bottom_nav_color"
+        app:labelVisibilityMode="labeled"
+        app:itemActiveIndicatorStyle="@null"
         android:background="?android:attr/windowBackground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

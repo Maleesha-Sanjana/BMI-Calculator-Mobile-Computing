@@ -1,31 +1,30 @@
 package edu.cinec.bmicalculator;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TipsFragment extends Fragment {
+public class TipsActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private TipAdapter tipAdapter;
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_tips, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_tips);
 
-        recyclerView = view.findViewById(R.id.recyclerViewTips);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        NavigationUtils.setupBottomNavigation(this, bottomNavigationView, R.id.tipsFragment);
+
+        recyclerView = findViewById(R.id.recyclerViewTips);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         List<Tip> tips = new ArrayList<>();
         tips.add(new Tip("Hydrate first", "Drink a glass of water when you wake up"));
@@ -35,7 +34,5 @@ public class TipsFragment extends Fragment {
 
         tipAdapter = new TipAdapter(tips);
         recyclerView.setAdapter(tipAdapter);
-
-        return view;
     }
 }
