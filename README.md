@@ -1,2 +1,2 @@
 # BMI-Calculator-Mobile-Computing
-Native Java Assignment
+Native Java Assignment - Mobile Computing
