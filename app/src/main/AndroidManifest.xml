@@ -20,6 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TipsActivity" />
+        <activity android:name=".EatingActivity" />
+        <activity android:name=".AdviceActivity" />
     </application>
 
 </manifest>
